@@ -28,6 +28,8 @@ public class Player : MonoBehaviour {
 	private Vector3 _projectilePosCache = Vector3.zero;
 
 	private bool _isEnabled = true;
+	private int laneIndex = 1;
+
 
 	// Use this for initialization
 	void Start () {
@@ -101,23 +103,20 @@ public class Player : MonoBehaviour {
 			Projectile projectile = bullet.GetComponent<Projectile>();
 			projectile.container = projectileContainer;
 			projectile.rate = _projectileSpeed;
+			projectile.laneIndex = laneIndex;
 			projectile.offset = _offset;
 			projectile.isEnabled = true;
 		}
 	}
 
 	public void Move(float offset){
-		Debug.Log ("Offset: " + offset);
+
 		float direction = offset * 2f;
-		Debug.Log ("Direction: " + direction);
 		float newPositionX = _player.transform.localPosition.x + direction;
-		Debug.Log ("New position: " + newPositionX);
-		Debug.Log ("Limit : " + offset * ((_reqNum * 2) + 1));
-		Debug.Log ("Limit : " + ((_reqNum * 2) + 1));
 		if (newPositionX > 0 && newPositionX < Mathf.Abs(offset) * ((_reqNum * 2) + 1.1f)){
-			Debug.Log ("Moved");
 			_playerPosCache.x = newPositionX;
 			_player.transform.localPosition = _playerPosCache;
+			laneIndex = offset < 0 ? laneIndex-1 : laneIndex+1;
 		}
 	}
 

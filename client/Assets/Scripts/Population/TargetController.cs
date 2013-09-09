@@ -51,7 +51,9 @@ public class TargetController : MonoBehaviour {
 			_targetList.Add(target);
 			target.container = targetContainer;
 			target.offset = _offset;
+			Debug.Log ("Offset: " + _offset);
 			target.lane = i + 1;
+			target.speed = 1;
 			target.rate = _reqDegradation;
 			target.isEnabled = true;
 		}

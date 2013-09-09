@@ -28,11 +28,13 @@ public class Target : MonoBehaviour {
 				totalTime = 0;
 				targetPosCache = transform.localPosition;
 				float limit = -(offset / 2f);
-				if (transform.localPosition.y <= 0) {
+				if (transform.localPosition.y >= limit) {
 					targetPosCache.y = limit;
 					transform.localPosition = targetPosCache;
 				} else {
 					targetPosCache.y += offset * speed;
+					Debug.Log (offset);
+					Debug.Log (speed);
 					transform.localPosition = targetPosCache;
 				}
 			}
@@ -53,6 +55,7 @@ public class Target : MonoBehaviour {
 
 	void HandleOnProjectileHit (int laneIndex){
 		if (laneIndex == lane){
+			Debug.Log ("Hit lane: " + laneIndex);
 			targetPosCache.y -= offset * speed;
 		}
 	}

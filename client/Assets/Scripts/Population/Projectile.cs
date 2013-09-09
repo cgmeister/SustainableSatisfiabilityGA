@@ -11,7 +11,8 @@ public class Projectile : MonoBehaviour {
 	public float totalTime = 0;
 	public int rate = 1;
 	public float offset = 0;
-	private Vector3 projectilePos = Vector3.zero;
+	private Vector3 projectilePos = Vector3.zero; 
+	private bool hit = false;
 	// Use this for initialization
 	void Start () {
 
@@ -19,18 +20,7 @@ public class Projectile : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (isEnabled){
-			RaycastHit hit;
-			if(Physics.Raycast (transform.position, transform.position * 0.01f, out hit, 0.1f)){
-				isEnabled = false;
-				if (OnProjectileHit != null){
-					OnProjectileHit(laneIndex);
-					Destroy (gameObject);
-				}
-				Debug.DrawLine(transform.position, transform.position * 0.01f, Color.red);
-			} else {
-				Debug.DrawLine(transform.position, transform.position * 0.01f, Color.green);
-			}								
+		if (isEnabled){								
 			totalTime += Time.deltaTime;
 			if (totalTime >= rate){
 				totalTime = 0;
@@ -42,5 +32,16 @@ public class Projectile : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	void OnTriggerEnter(Collider collider){
+		Debug.Log ("Projectile Hit");
+		if (hit) 
+			return;
+		hit = true;
+		if (OnProjectileHit != null){
+			OnProjectileHit (laneIndex);
+		}
+		Destroy (gameObject);
 	}
 }
