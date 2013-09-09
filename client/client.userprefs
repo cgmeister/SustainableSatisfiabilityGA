@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainApplication.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Environment\EnvironmentGenerator.cs" Line="68" Column="15" />
+      <File FileName="Assets\Scripts\ClickUtility.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Engine\GameSimulator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\UIInfoView.cs" Line="1" Column="1" />
+      <File FileName="Assets\Libraries\Optimera\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Data\GAModel.cs" Line="16" Column="38" />
+      <File FileName="Assets\Scripts\Utility\SCVWriter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Population\Player.cs" Line="37" Column="24" />
+      <File FileName="Assets\Scripts\Population\Target.cs" Line="25" Column="18" />
+      <File FileName="Assets\Scripts\MainApplication.cs" Line="189" Column="3" />
+      <File FileName="Assets\Scripts\Population\Projectile.cs" Line="5" Column="24" />
+      <File FileName="Assets\Scripts\Population\TargetController.cs" Line="20" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

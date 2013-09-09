@@ -1,0 +1,40 @@
+﻿
+Contact:
+==============================
+
+Chas Egan
+www.cosmobomb.com
+
+
+
+Disclaimer:  
+==============================
+
+All code is provided on an "AS IS" basis, without warranty. The author 
+makes no representation, or warranty, either express or implied, with 
+respect to the code, its quality, accuracy, or fitness for a specific 
+purpose. Therefore, the author shall not have any liability to you or any 
+other person or entity with respect to any liability, loss, or damage 
+caused or alleged to have been caused directly or indirectly by the code
+provided.  This includes, but is not limited to, interruption of service, 
+loss of data, loss of profits, or consequential damages from the use of 
+this code.
+
+
+
+Acknowledgements:
+==============================
+
+This software was originally based on the Genetic Algroithm package shared 
+by Barry Lapthorn on codeproject: 
+http://www.codeproject.com/Articles/3172/A-Simple-C-Genetic-Algorithm
+
+Although I did not use it, you may also wish to check out
+http://www.codeproject.com/Articles/9702/A-simpler-C-genetic-algorithm
+
+I have parallelized the algorithm to take advantage of modern multi-core 
+processors. For this purpose I have used the SmartThreadPool shared by
+Ami Bar on codeproject:
+http://www.codeproject.com/Articles/7933/Smart-Thread-Pool
+
+

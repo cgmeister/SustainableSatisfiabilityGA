@@ -1,0 +1,48 @@
+﻿#
+# 1) DONE
+# Replace the use of System.Threading.ThreadPool with SmartThreadPool.
+#
+# 2) DONE
+# Put descriptions on all your public methods and properties.
+# GA.cs - DONE
+# Genome.cs - DONE
+# GenomeComparer.cs - DONE
+# IOptimisable.cs - DONE
+# ObjectDispatcher.cs - DONE
+
+3) NOT STARTED
+Build xml documentation (Visual Studio can do this automatically).
+
+# 4) DONE
+# Why are some of my runs hanging? It looks weird... like maybe I have 
+# some threads accessing the same shit.
+
+5) NOT STARTED
+It may be nice to enhance the mutation types. Currently I'm using the 
+roulette style parent selection method. It seems to depend on the 
+absolute value of the fitnesses... which is not cool. Also might be
+nice to have a mutate-up and mutate-down option, but since values 
+aren't discrete I'm not sure how to do it best.
+
+# 6) NOT STARTED
+# Enhance termination conditions.
+# At the moment it runs to a set number of generations. But I would like
+# to be able to control it better. Maybe use a pest-style convergence 
+# criteria where you require a certain level of stability over a certain
+# number of consecutive generations. An optional time-out would also be 
+# good.
+#
+# 7) NOT STARTED
+# Add another couple of constructors to GA.cs. Choose a couple that 
+# you think might be handy, and make sure the parameters adopt reasonable
+# default values.
+#
+# 8) NOT STARTED
+# The GA should offer a callback which is triggered at the end 
+# of each generation. The callback should return information including
+# - a timestamp
+# - the number of runs completed
+# - the number of generations completed
+# - the best fitness so far
+#
+
